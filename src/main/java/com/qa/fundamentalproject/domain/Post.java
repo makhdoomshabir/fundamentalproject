@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Blog {
+class Post {
 
     @Id
     @GeneratedValue
@@ -19,10 +19,10 @@ public class Blog {
     @Column
     private String body;
 
-    public Blog() {
+    public Post() {
     }
 
-    public Blog(String title, String body) {
+    public Post(String title, String body) {
         this.title = title;
         this.body = body;
     }
