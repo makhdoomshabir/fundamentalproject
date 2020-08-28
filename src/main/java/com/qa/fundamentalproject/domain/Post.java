@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 
 @Entity
-class Post {
+public class Post {
 
     @Id
     @GeneratedValue
