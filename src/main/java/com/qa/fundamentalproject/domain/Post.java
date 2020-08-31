@@ -1,9 +1,6 @@
 package com.qa.fundamentalproject.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -18,6 +15,9 @@ public class Post {
 
     @Column
     private String body;
+
+    @ManyToOne(targetEntity = Blog.class)
+    private Blog blog;
 
     public Post() {
     }
@@ -49,5 +49,13 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public Blog getBlog() {
+        return blog;
+    }
+
+    public void setBlog(Blog blog) {
+        this.blog = blog;
     }
 }
