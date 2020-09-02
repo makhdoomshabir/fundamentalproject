@@ -1,9 +1,13 @@
 package com.qa.fundamentalproject.rest;
 
 
+
 import com.qa.fundamentalproject.domain.Blog;
+import com.qa.fundamentalproject.dto.BlogDTO;
 import com.qa.fundamentalproject.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,24 +22,24 @@ public class BlogController {
     }
 
     @GetMapping("/getAllBlogs")
-    public List<Blog> getAllBlogs(){
-        return this.blogService.readAllBlogs();
+    public ResponseEntity<List<BlogDTO>> getAllBlogs(){
+        return ResponseEntity.ok(this.blogService.readAllBlogs());
     }
     @PostMapping("/createBlog")
-    public Blog createBlog(@RequestBody Blog blog){
-        return this.blogService.createBlog(blog);
+    public ResponseEntity<BlogDTO> createBlog(@RequestBody Blog blog){
+        return new ResponseEntity<BlogDTO>(this.blogService.createBlog(blog), HttpStatus.CREATED);
     }
     @DeleteMapping("/deleteBlog/{id}")
     public Boolean deleteBlog(@PathVariable Long id){
         return this.blogService.deleteBlogById(id);
     }
     @GetMapping("/getBlogById/{id}")
-    public Blog getBlogById(@PathVariable Long id){
-        return this.blogService.findBlogById(id);
+    public ResponseEntity<BlogDTO> getBlogById(@PathVariable Long id){
+        return ResponseEntity.ok(this.blogService.findBlogById(id));
     }
     @PutMapping("/updateBlog/{id}")
-    public Blog updateBlog(@PathVariable Long id, @RequestBody Blog blog){
-        return this.blogService.updateBlog(id, blog);
+    public ResponseEntity<BlogDTO> updateBlog(@PathVariable Long id, @RequestBody Blog blog){
+        return ResponseEntity.ok(this.blogService.updateBlog(id, blog));
     }
 
 
