@@ -6,9 +6,7 @@ import com.qa.fundamentalproject.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.acl.LastOwnerException;
 import java.util.List;
-import java.util.LongSummaryStatistics;
 
 @RestController
 public class BlogController {
