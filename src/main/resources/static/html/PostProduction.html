@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Add New Post</title>
+    <script src="../js/homepage.js"></script>
 </head>
 <body>
 <h1>CREATE NEW POST</h1>
 <a href="Homepage.html">RETURN TO HOMEPAGE</a>
+
+<form id="postsForm">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="body">Body:</label><br>
+    <input type="text" id="body" name="body"><br><br>
+    <label for="blogId">Blog ID:</label><br>
+    <input type="text" id="blogId" name="blogId"><br><br>
+    <input type="submit" onclick="submitPost()" value="Submit">
+</form>
 
 </body>
 </html>
