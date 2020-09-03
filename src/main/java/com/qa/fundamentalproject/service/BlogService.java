@@ -2,39 +2,48 @@ package com.qa.fundamentalproject.service;
 
 
 import com.qa.fundamentalproject.domain.Blog;
+import com.qa.fundamentalproject.dto.BlogDTO;
 import com.qa.fundamentalproject.exception.BlogNotFoundException;
 import com.qa.fundamentalproject.repo.BlogRepository;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class BlogService {
 
     private final BlogRepository repo;
 
+    private final ModelMapper mapper;
+
     @Autowired
-    public BlogService(BlogRepository repo) {
+    public BlogService(BlogRepository repo, ModelMapper mapper) {
         this.repo = repo;
+        this.mapper = mapper;
     }
-    public List<Blog> readAllBlogs(){
-        return this.repo.findAll();
-    }
-
-    public Blog createBlog(Blog blog){
-        return this.repo.save(blog);
+    private BlogDTO mapToDTO(Blog blog){
+        return this.mapper.map(blog, BlogDTO.class);
     }
 
-    public Blog findBlogById(Long id){
-        return this.repo.findById(id).orElseThrow(BlogNotFoundException::new);
+    public List<BlogDTO> readAllBlogs(){
+        return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
     }
 
-    public Blog updateBlog(Long id, Blog blog){
-        Blog update = findBlogById(id);
+    public BlogDTO createBlog(Blog blog){
+        return this.mapToDTO(this.repo.save(blog));
+    }
+
+    public BlogDTO findBlogById(Long id){
+        return this.mapToDTO(this.repo.findById(id).orElseThrow(BlogNotFoundException::new));
+    }
+
+    public BlogDTO updateBlog(Long id, Blog blog){
+        Blog update = this.repo.findById(id).orElseThrow(BlogNotFoundException::new);
         update.setName(blog.getName());
-        return this.repo.save(update);
+        return this.mapToDTO(this.repo.save(update));
     }
 
     public Boolean deleteBlogById(Long id){
