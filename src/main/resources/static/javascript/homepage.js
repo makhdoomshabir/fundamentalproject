@@ -1,4 +1,4 @@
-function greeting(){
+function displayBlogs(){
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
         // Example handle logic
@@ -9,6 +9,29 @@ function greeting(){
                 // let elem = document.createElement('div');
                 // elem.textContent = "hello world";
                 // document.body.appendChild(elem);
+
+                let stuff = JSON.parse(req.response);
+                stuff.forEach(el => {
+                    // console.log(el); // prints whole element
+                    // console.log(el.name); // allows access to specific value
+
+
+                    // adding title to the body of the page
+                    let elem = document.createElement('div');
+                    let header = document.createElement('h1');
+                    header.textContent = "Blog name: " + el.name;
+                    elem.appendChild(header);
+                    el.posts.forEach(post => {
+                        console.log(post) // print all posts for each blog
+                        let title = document.createElement('p');
+                        let body = document.createElement('p');
+                        title.textContent = "Title: " + post.title;
+                        body.textContent = "Body: " + post.description;
+                        elem.appendChild(title);
+                        elem.appendChild(body);
+                    })
+                    document.body.appendChild(elem);
+                });
 
 
 
