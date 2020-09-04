@@ -17,7 +17,7 @@ public class Blog {
         @Column
         private String name;
 
-        @OneToMany(mappedBy = "blog", fetch = FetchType.EAGER)
+        @OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
         private List<Post> posts = new ArrayList<>();
 
         public Blog() {
