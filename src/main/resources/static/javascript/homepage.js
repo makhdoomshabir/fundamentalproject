@@ -1,4 +1,5 @@
-function displayBlogs(){
+ function displayBlogs(){
+    console.log("hello world");
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
         // Example handle logic
@@ -19,7 +20,7 @@ function displayBlogs(){
                     // adding title to the body of the page
                     let elem = document.createElement('div');
                     let header = document.createElement('h1');
-                    header.textContent = "Blog name: " + el.name;
+                    header.textContent = "Blog Name: " + el.name;
                     elem.appendChild(header);
                     el.posts.forEach(post => {
                         console.log(post) // print all posts for each blog
@@ -47,23 +48,24 @@ function displayBlogs(){
     req.open("GET", "http://localhost:8080/getAllBlogs");
     req.send();
 }
-function submitPost(){
-    let elements = document.getElementById("postsForm").elements;
-    let obj ={};
-    for(let i = 0 ; i < elements.length - 1 ; i++){
-        let item = elements.item(i);
-        obj[item.name] = item.value;
-    }
+ function submitPost(){
+     let elements = document.getElementById("postsForm").elements;
+     let obj ={};
+     for(let i = 0 ; i < elements.length - 1 ; i++){
+         let item = elements.item(i);
+         obj[item.name] = item.value;
+     }
 
-    const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8080/createPost");
-    req.onload = () => {
-        if (req.status === 200 && req.readyState == 4) {
-            console.log("Server Responded with: " + req.responseText);
-        } else {
-            console.log("Oops...");
-        }
-    };
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify({ title: obj.title, body: obj.body, blog:{ id: Number(obj.blogId)} }));
-}
+     const req = new XMLHttpRequest();
+     req.open("POST", "http://localhost:8080/createPost");
+     req.onload = () => {
+         if (req.status === 200 && req.readyState === 4) {
+             console.log("Server Responded with: " + req.responseText);
+         } else {
+             console.log("Oops...");
+         }
+     };
+     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+     req.send(JSON.stringify({ title: obj.title, body: obj.body, blog:{ id: Number(obj.blogId)} }));
+ }
+
