@@ -5,7 +5,7 @@ function deletePost() {
     obj[item.name] = item.value;
 
     const req = new XMLHttpRequest();
-    let id = obj.blogId;
+    let id = obj.id;
     alert(id);
     req.open("DELETE", "http://localhost:8080/deleteBlog/" + id);
     req.onload = () => {
@@ -16,5 +16,5 @@ function deletePost() {
         }
     };
     req.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify( { blogId: obj.blogId } ));
+    req.send();
 }

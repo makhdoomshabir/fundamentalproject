@@ -21,8 +21,10 @@ public class BlogController {
         this.blogService = blogService;
     }
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/getAllBlogs")
     public ResponseEntity<List<BlogDTO>> getAllBlogs(){
+        System.out.println(this.blogService.readAllBlogs());
         return ResponseEntity.ok(this.blogService.readAllBlogs());
     }
     @PostMapping("/createBlog")

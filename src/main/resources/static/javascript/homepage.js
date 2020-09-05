@@ -1,5 +1,4 @@
  function displayBlogs(){
-    console.log("hello world");
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
         // Example handle logic
@@ -24,10 +23,13 @@
                     elem.appendChild(header);
                     el.posts.forEach(post => {
                         console.log(post) // print all posts for each blog
+                        let name = document.createElement('p');
                         let title = document.createElement('p');
                         let body = document.createElement('p');
+                        name.textContent = "Name: " + post.name;
                         title.textContent = "Title: " + post.title;
-                        body.textContent = "Body: " + post.description;
+                        body.textContent = "Body: " + post.body;
+                        elem.appendChild(name);
                         elem.appendChild(title);
                         elem.appendChild(body);
                     })
@@ -49,15 +51,18 @@
     req.send();
 }
  function submitPost(){
+    // console.log("hello");
      let elements = document.getElementById("postsForm").elements;
+     console.log(elements);
      let obj ={};
      for(let i = 0 ; i < elements.length - 1 ; i++){
          let item = elements.item(i);
          obj[item.name] = item.value;
      }
 
+     // console.log(obj.id);
      const req = new XMLHttpRequest();
-     req.open("POST", "http://localhost:8080/createPost");
+     req.open("POST", "http://localhost:8080/createBlog");
      req.onload = () => {
          if (req.status === 200 && req.readyState === 4) {
              console.log("Server Responded with: " + req.responseText);
@@ -65,7 +70,17 @@
              console.log("Oops...");
          }
      };
-     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-     req.send(JSON.stringify({ title: obj.title, body: obj.body, blog:{ id: Number(obj.blogId)} }));
- }
 
+     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+     req.send(JSON.stringify(
+         {
+             name: obj.name,
+             title: obj.title,
+             body: obj.body,
+             blog:{
+                 id: Number(obj.id)
+             }
+         }
+         )
+     );
+ }
