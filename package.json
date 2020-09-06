@@ -1,0 +1,23 @@
+{
+  "name": "fundamental-project",
+  "version": "1.0.0",
+  "description": "this is a CRUD application ",
+  "main": "homepage.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makhdoomshabir/fundamentalproject.git"
+  },
+  "author": "makhdoom shabir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makhdoomshabir/fundamentalproject/issues"
+  },
+  "homepage": "https://github.com/makhdoomshabir/fundamentalproject#readme"
+}
+
