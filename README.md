@@ -64,7 +64,7 @@ Wont have:
 
 
 ### Jira Board
-![jira board](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-03%2023-42-37.png)
+![jira board](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-49-05.png)
 
 ### Installation
 Use the command line to run the application from Springboot, the server host is "localhost:8080"
