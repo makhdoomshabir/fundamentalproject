@@ -31,6 +31,10 @@ Application will be a blog form
  2. Create title
  3. Create body of text
  4. Submit, append, and delete multiple blogs
+ 
+### Entity Relationship Diagram 
+
+![ERD](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-00-13.png)
   
 ### CI Pipeline
 ![CI Pipeline](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2023-37-35.png)
