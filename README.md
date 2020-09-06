@@ -1,6 +1,6 @@
 # Fundamental_Project
 
-## BLog Site
+## Blog Site
 
 ### Brief
 
@@ -90,6 +90,8 @@ A sprint from my Jira board:
 ### Installation
 Use the command line to run the application from Springboot, the server host is "localhost:8080/html/Homepage.html"
 
+![front-end](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-23-14.png)
+
 ### Risk Assessment
 
 The risk assessment covers and highlights any potential risk of failure or security dangers with a guide of how bad this risk is and whether it can be tolerated or not.
@@ -117,4 +119,5 @@ Error due to there being no package.json file. Something we havent come across y
 * A more aesthetic front end to entice client customers to use the application. This would be achieved with CSS.
 * More accessible features such as the ability to alter fonts, font size, title sizes, add images, organise the structure of the page.
 * Smaller implementations such as adding a "date created" and an "author" for each post created.
-
+### Author 
+Makhdoom Shabir 
