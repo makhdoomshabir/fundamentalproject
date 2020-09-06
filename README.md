@@ -73,6 +73,10 @@ Use the command line to run the application from Springboot, the server host is 
 
 ![risk assessment](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-04%2012-54-11.png)
 
+### Circle CI Deployment Attempt
+
+![deploy](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-37-41.png)
+
 ### Current Bugs
 
 * Blog name can be created but post themselves cannot
