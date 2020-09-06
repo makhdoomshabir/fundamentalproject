@@ -1,6 +1,6 @@
 # Fundamental_Project
 
-## Name Of Application
+## BLog Site
 
 ### Brief
 
@@ -33,6 +33,8 @@ Application will be a blog form
  4. Submit, append, and delete multiple blogs
  
 ### Entity Relationship Diagram 
+
+The ERD requires 3 tables, a user table, a blog name table and a post table. Posts hold a many-to-one relationship with blogs. As the user would enter data into the tables, there is no need for me to add any data in prior to the application running.
 
 ![ERD](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-00-13.png)
   
@@ -81,6 +83,8 @@ Wont have:
 
 
 ### Jira Board
+A sprint from my Jira board:
+
 ![jira board](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-49-05.png)
 
 ### Installation
@@ -88,7 +92,9 @@ Use the command line to run the application from Springboot, the server host is 
 
 ### Risk Assessment
 
-![risk assessment](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-04%2012-54-11.png)
+The risk assessment covers and highlights any potential risk of failure or security dangers with a guide of how bad this risk is and whether it can be tolerated or not.
+
+![risk assessment](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-19-19.png)
 
 ### Circle CI Deployment Attempt
 
