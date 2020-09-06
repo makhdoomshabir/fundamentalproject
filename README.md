@@ -35,12 +35,18 @@ Application will be a blog form
 ### CI Pipeline
 ![CI Pipeline](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/CI_Pipeline(1)image.gif)
 
-* Source code – We chose IntelliJ due to all having prior knowledge of using this IDE as well as its natural integration for Java development. Open source which means there is access to lots of helpful documentation.
+* Source code – Java
+
 * VCS – We chose GitHub because Git is now considered an industry standard as apposed to something like Subversion. One of the most useful features being that you have access to prior builds so that if any issues arise you can revert back to previous builds of the application. The use of branches also enables teams to work away from the master branch where they can work on specific features, all these features encourage teamwork. 
+
 * Project Tracking – We chose Jira Software because it is more suited towards software development specifically whereas other tracking tools such as Trello are more one-size fits all. Jira has built in features such as sprints tailored for agile software development.
-* Email Server – We chose Outlook because it is the default Email service with Jenkins so it made sense to stick with it. Outlook is also a very common Email service provider.
+
+* Email Server – We chose Outlook because it is the default Email service and a very common Email service provider.
+
 * CI Server – We chose Jenkins because it is open sourced and runs on Ubuntu which is the OS we are developing on as a team which provides us with consistency across devices. Its internal and cloud based. 
+
 * Build Tool – Jenkins
+
 * Artefact Repository – GitHub
 
 ### Moscow Prioritisation 
@@ -67,7 +73,7 @@ Wont have:
 ![jira board](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-49-05.png)
 
 ### Installation
-Use the command line to run the application from Springboot, the server host is "localhost:8080"
+Use the command line to run the application from Springboot, the server host is "localhost:8080/html/Homepage.html"
 
 ### Risk Assessment
 
@@ -80,7 +86,7 @@ Use the command line to run the application from Springboot, the server host is 
 ### Current Bugs
 
 * Blog name can be created but post themselves cannot
-* Delete functionality not yet working 
+* Error calling the id from javascript to then succesfully delete and append posts
 * Application has not yet been connected to the GCP
 
 ### Future Version Improvements 
