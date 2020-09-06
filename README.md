@@ -33,21 +33,28 @@ Application will be a blog form
  4. Submit, append, and delete multiple blogs
   
 ### CI Pipeline
-![CI Pipeline](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/CI_Pipeline(1)image.gif)
+![CI Pipeline](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2023-37-35.png)
 
-* Source code – Java
+* Source code: Java 
+  1. Object orientated allowing for reuasable code  
+  2. Secure
 
-* VCS – We chose GitHub because Git is now considered an industry standard as apposed to something like Subversion. One of the most useful features being that you have access to prior builds so that if any issues arise you can revert back to previous builds of the application. The use of branches also enables teams to work away from the master branch where they can work on specific features, all these features encourage teamwork. 
+* VCS: GitHub 
+  1. Considered an industry standard as apposed to something like Subversion.
+  2. Have access to prior builds allowing you to revert back to previous builds of the application. 
+  3. Can work in development branch and merge changes into master.
 
-* Project Tracking – We chose Jira Software because it is more suited towards software development specifically whereas other tracking tools such as Trello are more one-size fits all. Jira has built in features such as sprints tailored for agile software development.
+* Project Tracking: Jira Software 
+  1. More suited towards software development whereas Trello is more generic. 
+  2. Jira has built in features such as sprints tailored for agile software development.
 
-* Email Server – We chose Outlook because it is the default Email service and a very common Email service provider.
+* Email Server: Outlook 
+  1. Default Email service and a very common Email service provider.
 
-* CI Server – We chose Jenkins because it is open sourced and runs on Ubuntu which is the OS we are developing on as a team which provides us with consistency across devices. Its internal and cloud based. 
-
-* Build Tool – Jenkins
-
-* Artefact Repository – GitHub
+* CI Server: Circle CI 
+  1. Can run complicated pipelines efficiently.
+  2. Seamlessly connects with Github.
+  
 
 ### Moscow Prioritisation 
 
@@ -83,11 +90,16 @@ Use the command line to run the application from Springboot, the server host is 
 
 ![deploy](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-37-41.png)
 
+Error due to there being no package.json file. Something we havent come across yet however I attempted to add a package.json file, with no real luck.
+
+![package.json file](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2023-57-49.png)
+
 ### Current Bugs
 
-* Blog name can be created but post themselves cannot
+* Cannot create posts within a blog 
 * Error calling the id from javascript to then succesfully delete and append posts
 * Application has not yet been connected to the GCP
+* Deployment failed due to no package.json file available
 
 ### Future Version Improvements 
 
