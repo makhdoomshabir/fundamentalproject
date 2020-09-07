@@ -18,7 +18,7 @@ This project requires a CRUD (create, read, update, delete) application which sh
 
 ### Methodology
 
-Application will be a blog form
+Application will be of a blog. You can create a new blog name and under this create posts. The blog name can be thought of as a tag. An example would be a mens health blog where grooming and fitness would be two generic blog names. Under these the user can create posts with a title to introduce what will be discussed as well as a body of content.
 
 * Login Details:
  1. Username
