@@ -97,7 +97,7 @@ Use the command line to run the application from Springboot, the server host is 
 
 The risk assessment covers and highlights any potential risk of failure or security dangers with a guide of how bad this risk is and whether it can be tolerated or not.
 
-![risk assessment](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-19-19.png)
+![risk assessment](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-07%2010-13-41.png)
 
 ### Circle CI Deployment Attempt
 
