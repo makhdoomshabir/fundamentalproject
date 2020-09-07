@@ -22,15 +22,16 @@ Application will be of a blog. You can create a new blog name and under this cre
 
 * Login Details:
  1. Username
- 2. Password
- 3. Name of Blog
+ 2. Email
+ 3. Password
  
+* Creating Blogs:
+  1. Create blog name
  
 * Creating Posts:
- 1. Create Blog name
- 2. Create title
- 3. Create body of text
- 4. Submit, append, and delete multiple blogs
+ 1. Create title
+ 2. Create body of text
+ 3. Submit, append, and delete multiple blogs
  
 ### Entity Relationship Diagram 
 
