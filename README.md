@@ -1,6 +1,6 @@
 # Fundamental_Project
 
-## Name Of Application
+## Blog Site
 
 ### Brief
 
@@ -18,21 +18,24 @@ This project requires a CRUD (create, read, update, delete) application which sh
 
 ### Methodology
 
-Application will be a blog form
+Application will be of a blog. You can create a new blog name and under this create posts. The blog name can be thought of as a tag. An example would be a mens health blog where grooming and fitness would be two generic blog names. Under these the user can create posts with a title to introduce what will be discussed as well as a body of content.
 
 * Login Details:
  1. Username
- 2. Password
- 3. Name of Blog
+ 2. Email
+ 3. Password
  
+* Creating Blogs:
+  1. Create blog name
  
 * Creating Posts:
- 1. Create Blog name
- 2. Create title
- 3. Create body of text
- 4. Submit, append, and delete multiple blogs
+ 1. Create title
+ 2. Create body of text
+ 3. Submit, append, and delete multiple blogs
  
 ### Entity Relationship Diagram 
+
+The ERD requires 3 tables, a user table, a blog name table and a post table. Posts hold a many-to-one relationship with blogs. As the user would enter data into the tables, there is no need for me to add any data in prior to the application running.
 
 ![ERD](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-00-13.png)
   
@@ -81,14 +84,20 @@ Wont have:
 
 
 ### Jira Board
+A sprint from my Jira board:
+
 ![jira board](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-06%2013-49-05.png)
 
 ### Installation
 Use the command line to run the application from Springboot, the server host is "localhost:8080/html/Homepage.html"
 
+![front-end](https://github.com/makhdoomshabir/fundamentalproject/blob/master/Screenshot%20from%202020-09-07%2000-23-14.png)
+
 ### Risk Assessment
 
-![risk assessment](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-04%2012-54-11.png)
+The risk assessment covers and highlights any potential risk of failure or security dangers with a guide of how bad this risk is and whether it can be tolerated or not.
+
+![risk assessment](https://github.com/makhdoomshabir/Fundamental_Project/blob/master/Screenshot%20from%202020-09-07%2010-13-41.png)
 
 ### Circle CI Deployment Attempt
 
@@ -111,4 +120,5 @@ Error due to there being no package.json file. Something we havent come across y
 * A more aesthetic front end to entice client customers to use the application. This would be achieved with CSS.
 * More accessible features such as the ability to alter fonts, font size, title sizes, add images, organise the structure of the page.
 * Smaller implementations such as adding a "date created" and an "author" for each post created.
-
+### Author 
+Makhdoom Shabir 
