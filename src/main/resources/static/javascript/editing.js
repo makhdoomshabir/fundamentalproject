@@ -7,7 +7,7 @@ function deletePost() {
     const req = new XMLHttpRequest();
     let id = obj.id;
     alert(id);
-    req.open("DELETE", "http://localhost:8080/deleteBlog/" + id);
+    req.open("DELETE", "http://localhost:8090/deleteBlog/" + id);
     req.onload = () => {
         if (req.status === 200 && req.readyState === 4) {
             console.log("Server responded with: " + req.responseText);

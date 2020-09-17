@@ -8,7 +8,7 @@ function updatePost() {
 
         const req = new XMLHttpRequest();
         let id = obj.id;
-        req.open("PUT", "http://localhost:8080/updateBlog/" + id);
+        req.open("PUT", "http://localhost:8090/updateBlog/" + id);
         req.onload = () => {
             if (req.status === 200 && req.readyState === 4) {
                 console.log("Server responded with: " + req.responseText);

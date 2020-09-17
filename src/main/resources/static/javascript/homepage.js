@@ -47,7 +47,7 @@
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/getAllBlogs");
+    req.open("GET", "http://localhost:8090/getAllBlogs");
     req.send();
 }
  function submitPost(){
@@ -62,7 +62,7 @@
 
      // console.log(obj.id);
      const req = new XMLHttpRequest();
-     req.open("POST", "http://localhost:8080/createBlog");
+     req.open("POST", "http://localhost:8090/createBlog");
      req.onload = () => {
          if (req.status === 200 && req.readyState === 4) {
              console.log("Server Responded with: " + req.responseText);
